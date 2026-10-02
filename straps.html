@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Ремни репортёров Nikon</title>
+<meta name="description" content="Какие ремни носили фоторепортёры на Nikon с 1950-х до Z9: рейтинг, эпохи, артикулы заводских ремней и фотографии.">
+<style>
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Onest:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: one reading column (~700px) inside an 1100px frame; photos break out to the frame.
+   A "strap band" navigator encodes each era's strap colours, and the stripe height is the strap width to scale (1 cm = 8 px).
+   Light only, by the reader's request: white paper, dark ink.
+   Type: Figtree, as on the NIKKOR Z page. Figtree has no Cyrillic, so Russian letters come from Onest, the closest match. */
+:root{
+  color-scheme: light;
+  --paper:#FFFFFF;
+  --ink:#16181B;
+  --muted:#575C64;
+  --rule:#E2E2DC;
+  --tint:#F5F5F0;
+  --yellow:#FFCF00;
+  --yellow-deep:#D9A400;
+  --wine:#7A1E2C;
+  --maroon:#5B1722;
+  --gold:#C9A227;
+  --strap:#1C1C1D;
+  --leather:#3A2A22;
+  --f-display:"Figtree","Onest","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --f-body:"Figtree","Onest","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --f-mono:"Figtree","Onest","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{background:var(--paper)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--ink);text-decoration-line:underline;text-decoration-color:var(--yellow-deep);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{background:var(--yellow);text-decoration-color:var(--ink)}
+a:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+p{margin:0 0 1em}
+strong,b{font-weight:700}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:20px;padding-block:28px 72px}
+.col{max-width:700px}
+
+/* type */
+h1,h2,h3{font-family:var(--f-display);font-weight:800;line-height:1.04;letter-spacing:-.025em;text-wrap:balance;margin:0;color:var(--ink)}
+h1{font-size:clamp(2.6rem,6.4vw,4.7rem);letter-spacing:-.028em}
+h2{font-size:clamp(1.8rem,3.8vw,2.6rem);margin-bottom:8px}
+h3{font-size:1.4rem;letter-spacing:-.02em}
+.kicker,.eyebrow,.era-years,.tag,figcaption,.band-title,.b-years,.b-name,.b-w,.small,table,.sources,.foot{font-family:var(--f-mono)}
+.kicker{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:0 0 16px}
+.lead{font-size:1.2rem;line-height:1.55;margin:20px 0 0}
+.note{color:var(--muted);font-size:1rem;margin:14px 0 0}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--wine);margin:0 0 10px}
+
+/* header */
+.top{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:44px;align-items:end;padding-bottom:30px;border-bottom:1px solid var(--rule)}
+.top-text{min-width:0}
+.top-photo{max-width:460px;justify-self:end;width:100%}
+@media (max-width:840px){.top{grid-template-columns:1fr;gap:26px}.top-photo{justify-self:start;max-width:420px}}
+
+/* figures */
+figure{margin:0;min-width:0}
+figure img{display:block;width:100%;height:auto;background:var(--tint)}
+figcaption{font-size:13px;line-height:1.45;color:var(--muted);margin-top:9px}
+figcaption .credit{display:block;margin-top:3px}
+figcaption a{color:var(--muted);text-decoration-thickness:1px}
+.figs{display:grid;gap:22px;margin:30px 0 6px;align-items:start}
+.figs.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.figs.one{max-width:760px}
+.figs.one.narrow{max-width:520px}
+@media (max-width:640px){.figs.two{grid-template-columns:1fr}}
+
+/* strap swatches: height = strap width at 8 px per cm */
+.sw{display:block;width:100%;border-radius:2px;position:relative}
+.weave{background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 3px)}
+.sw-unknown{height:16px;border:1.5px dashed var(--muted);background:transparent}
+.sw-an1{height:8px;background:linear-gradient(to bottom,#3b3330,#141110)}
+.sw-an4{height:20px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 1px,transparent 1px 3px),linear-gradient(to bottom,var(--strap) 0 20%,var(--yellow) 20% 32%,var(--strap) 32% 68%,var(--yellow) 68% 80%,var(--strap) 80%)}
+.sw-an6y{height:40px;background:repeating-linear-gradient(90deg,rgba(0,0,0,.06) 0 1px,transparent 1px 3px),linear-gradient(to bottom,var(--strap) 0 7%,var(--yellow) 7% 11%,var(--strap) 11% 15%,var(--yellow) 15% 85%,var(--strap) 85% 89%,var(--yellow) 89% 93%,var(--strap) 93%)}
+.sw-an6w{height:40px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 1px,transparent 1px 3px),linear-gradient(to bottom,var(--yellow) 0 6%,var(--wine) 6% 94%,var(--yellow) 94%)}
+.sw-an14{height:22px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 1px,transparent 1px 3px),linear-gradient(to bottom,var(--maroon) 0 14%,var(--gold) 14% 20%,var(--maroon) 20% 80%,var(--gold) 80% 86%,var(--maroon) 86%)}
+.sw-dser{height:36px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 1px,transparent 1px 3px),var(--strap)}
+.sw-dser::before,.sw-dser::after{content:"";position:absolute;left:5px;right:5px;border-top:2px dashed var(--yellow)}
+.sw-dser::before{top:5px}.sw-dser::after{bottom:5px}
+.sw-nps{height:36px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 1px,transparent 1px 3px),linear-gradient(to bottom,var(--yellow) 0 11%,var(--strap) 11% 89%,var(--yellow) 89%)}
+.sw-pair{display:flex;gap:4px}
+.sw-pair .sw{flex:1}
+
+/* era band navigator */
+.band{margin:34px 0 0}
+.band-title{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.band-title span{text-transform:none;letter-spacing:0;font-weight:500;font-size:13px}
+.band-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
+.band-list li{min-width:0}
+.band-list a{display:flex;flex-direction:column;gap:5px;text-decoration:none;padding:10px 8px 12px;border-top:1px solid var(--rule);height:100%}
+.band-list a:hover{background:var(--tint)}
+.slot{height:44px;display:flex;align-items:center}
+.slot .sw-pair{width:100%}
+.b-years{font-size:12px;font-weight:600;color:var(--muted)}
+.b-name{font-size:14px;font-weight:700;color:var(--ink);line-height:1.25}
+.b-w{font-size:12px;color:var(--muted)}
+@media (max-width:920px){.band-list{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:520px){.band-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* top five */
+.section{margin-top:64px}
+.intro{max-width:700px;color:var(--ink)}
+.top5{list-style:none;padding:0;margin:30px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 36px}
+.card{display:flex;flex-direction:column;gap:14px;min-width:0}
+.card-1{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:30px;align-items:center;background:var(--tint);padding:26px}
+.card .ph img{aspect-ratio:4/3;object-fit:cover;width:100%;display:block}
+.card .ph figcaption{margin-top:7px}
+.card-head{display:flex;align-items:flex-end;gap:14px;margin-bottom:10px}
+.rank{font-family:var(--f-display);font-weight:800;font-size:4rem;line-height:.78;color:var(--ink)}
+.tag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;background:var(--yellow);color:var(--ink);padding:3px 7px 2px;border-radius:2px;margin-bottom:6px}
+.card h3{margin:0 0 10px}
+.card p{font-size:1rem}
+.nps-art{aspect-ratio:4/3;background:var(--paper);display:grid;place-items:center;overflow:hidden;border:1px solid var(--rule)}
+.nps-strap{display:block;width:150%;height:24%;transform:rotate(-13deg);background:repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 3px),linear-gradient(to bottom,var(--yellow) 0 9%,var(--strap) 9% 91%,var(--yellow) 91%);box-shadow:0 12px 26px rgba(22,24,27,.22)}
+.honor{margin-top:34px;max-width:760px;font-size:1rem;color:var(--ink)}
+@media (max-width:780px){.top5{grid-template-columns:1fr}.card-1{grid-template-columns:1fr;padding:18px}}
+
+/* eras */
+.era{margin-top:72px;padding-top:40px;border-top:1px solid var(--rule)}
+.era-years{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--wine);margin:0 0 10px}
+.era-sw{margin:18px 0 26px;max-width:700px}
+.era-sw .sw-pair{max-width:700px}
+.prose{max-width:700px}
+.prose p{margin-bottom:1.05em}
+blockquote{margin:0 0 1.05em;padding:0 0 0 18px;border-left:3px solid var(--yellow);font-weight:500}
+em{font-style:normal;font-weight:500}
+
+/* table */
+.table-wrap{overflow-x:auto;margin:24px 0 10px;border-top:2px solid var(--ink)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px;line-height:1.45}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;font-size:11px}
+td:first-child{font-weight:700;white-space:nowrap}
+td.sample{width:84px}
+td.sample .sw{width:64px}
+.small{font-size:13px;color:var(--muted);max-width:760px}
+
+/* tips */
+.tips{list-style:none;padding:0;margin:24px 0 0;max-width:760px}
+.tips li{padding:14px 0;border-bottom:1px solid var(--rule)}
+.tips li:first-child{border-top:1px solid var(--rule)}
+.tips b{font-family:var(--f-display);font-weight:800;font-size:1.15rem;letter-spacing:-.015em;margin-right:6px}
+
+/* sources */
+.sources{font-size:14px;line-height:1.55;max-width:860px}
+.sources h3{font-family:var(--f-mono);font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:26px 0 8px}
+.sources ol{margin:0;padding-left:1.4em}
+.sources li{margin-bottom:5px;overflow-wrap:anywhere}
+.foot{margin-top:48px;padding-top:18px;border-top:1px solid var(--rule);font-size:13px;color:var(--muted);max-width:760px}
+@media (max-width:520px){body{font-size:16px}.card-1{padding:16px}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+html{scroll-behavior:smooth}
+</style>
+<link rel="stylesheet" href="assets/menu.css">
+<style>
+  #top5,.era{scroll-margin-top:130px}
+  @media (max-width:640px){ #top5,.era{scroll-margin-top:96px} }
+  .wrap{padding-block:16px 72px}
+</style>
+</head>
+<body>
+<div class="mz-backdrop" id="mz-back"></div>
+<div class="mz" id="mz">
+  <div class="mz-row">
+    <div class="mz-name">
+      <a class="mz-logo" href="index.html">Музей фана Nikon</a>
+      <span class="mz-page"><span class="mz-slash">/ </span>Ремни репортёров</span>
+    </div>
+    <button class="mz-burger" id="mz-burger" type="button" aria-expanded="false" aria-controls="mz-panel" aria-label="Открыть меню"><span></span><span></span></button>
+  </div>
+  <nav class="mz-panel" id="mz-panel" aria-label="Меню сайта">
+    <div class="mz-in">
+      <div class="mz-grid">
+        <div class="mz-col">
+          <p class="mz-h">Разделы</p>
+        <a class="mz-link" href="index.html">Объективы NIKKOR Z</a>
+        <a class="mz-link" href="straps.html" aria-current="page">Ремни репортёров</a>
+        </div>
+        <div class="mz-col">
+          <p class="mz-h">На этой странице</p>
+        <a class="mz-link" href="#top5">Пятёрка самых классных</a>
+        <a class="mz-link" href="#e1950">Эпохи: 1950–2026</a>
+        <a class="mz-link" href="#models">Шпаргалка по артикулам</a>
+        <a class="mz-link" href="#sources">Источники</a>
+        </div>
+        <div class="mz-col mz-fig">
+          <b>1950–2026</b>
+          <span>шесть эпох, 19 фотографий</span>
+        </div>
+      </div>
+      <a class="mz-cta" href="index.html">
+        <span class="mz-cta-t">Объективы NIKKOR Z</span>
+        <span class="mz-cta-go"><span class="mz-go-t">Открыть таблицу</span><span class="mz-arr" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="butt" stroke-linejoin="miter"/></svg></span></span>
+        <span class="mz-cta-cur"><canvas aria-hidden="true"></canvas><span class="mz-cta-s">49 объективов с ценами</span><span class="mz-arr" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="butt" stroke-linejoin="miter"/></svg></span></span>
+      </a>
+    </div>
+  </nav>
+</div>
+
+<div class="wrap">
+
+<header class="top">
+  <div class="top-text">
+    <p class="kicker">Nikon · фоторепортаж · 1950–2026</p>
+    <h1>Ремни репортёров Nikon</h1>
+    <p class="lead">Камеры репортёров видны на тысячах снимков, а о ремнях почти никто не писал. Здесь собрано то, что удалось подтвердить: <b>каталоги Nikon</b>, <b>воспоминания фотографов</b>, музейные экспонаты и архивные фотографии.</p>
+    <p class="note">Где данные спорные или держатся на воспоминаниях владельцев, это сказано прямо в тексте. Внизу есть шпаргалка по артикулам Nikon, источники и авторы всех фотографий.</p>
+  </div>
+  <figure class="top-photo">
+    <img src="img/straps/burrows-1967.jpg" width="960" height="1447" alt="Ларри Бёрроуз во Вьетнаме в 1967 году, на груди у него висят несколько камер на ремнях">
+    <figcaption>Ларри Бёрроуз (LIFE), Вьетнам, февраль 1967 года. Несколько камер висят на ремнях прямо на груди, сумки нет.
+      <span class="credit">Фото: архив Корпуса морской пехоты США (NARA), <a href="https://commons.wikimedia.org/wiki/File:Larry_Burrows_in_1967.jpg">общественное достояние</a></span></figcaption>
+  </figure>
+</header>
+
+<nav class="band" aria-label="Эпохи">
+  <p class="band-title">Лента эпох · <span>толщина полосы = ширина ремня (1 см ≈ 8 px)</span></p>
+  <ol class="band-list">
+    <li><a href="#e1950"><span class="slot"><span class="sw sw-unknown"></span></span><span class="b-years">1950-е</span><span class="b-name">Nikon S, футляр</span><span class="b-w">ширина: нет данных</span></a></li>
+    <li><a href="#e1960"><span class="slot"><span class="sw sw-an1"></span></span><span class="b-years">1959–1975</span><span class="b-name">Nikon F, кожа AN-1</span><span class="b-w">≈ 1 см</span></a></li>
+    <li><a href="#e1970"><span class="slot"><span class="sw sw-an4"></span></span><span class="b-years">1971–1980</span><span class="b-name">F2, нейлон AN-4</span><span class="b-w">≈ 2,5 см</span></a></li>
+    <li><a href="#e1980"><span class="slot"><span class="sw-pair"><span class="sw sw-an6y"></span><span class="sw sw-an6w"></span></span></span><span class="b-years">1980-е</span><span class="b-name">F3, FM2: AN-6Y / 6W</span><span class="b-w">≈ 5 см</span></a></li>
+    <li><a href="#e1990"><span class="slot"><span class="sw sw-an14"></span></span><span class="b-years">1996</span><span class="b-name">F5: AN-14</span><span class="b-w">≈ 2,5 см</span></a></li>
+    <li><a href="#e2007"><span class="slot"><span class="sw sw-dser"></span></span><span class="b-years">2007–2021</span><span class="b-name">D3 … Z9</span><span class="b-w">≈ 4,5 см</span></a></li>
+    <li><a href="#e1990"><span class="slot"><span class="sw sw-nps"></span></span><span class="b-years">с 1980-х</span><span class="b-name">NPS, только профи</span><span class="b-w">≈ 4,5 см</span></a></li>
+  </ol>
+</nav>
+
+<section class="section" id="top5">
+  <p class="eyebrow">Рейтинг</p>
+  <h2>Пятёрка самых классных</h2>
+  <p class="intro">Критерии: статус среди репортёров, узнаваемость и то, насколько ремень решал рабочую задачу. Порядок — моя оценка.</p>
+
+  <ol class="top5">
+    <li class="card card-1">
+      <figure class="ph">
+        <div class="nps-art" role="img" aria-label="Иллюстрация: чёрная лента с жёлтой окантовкой, цвета ремня NPS"><span class="nps-strap"></span></div>
+        <figcaption>Цвета NPS-ремня, без логотипа. Настоящие ремни разных поколений сфотографированы в <a href="https://ameblo.jp/kengoshima/entry-12728270628.html">блоге фотографа KEN Goshima</a> (яп.).</figcaption>
+      </figure>
+      <div>
+        <div class="card-head"><span class="rank">1</span><span class="tag">статус</span></div>
+        <h3>NPS «Nikon Professional»</h3>
+        <p><b>Чёрно-жёлтый ремень, который не продаётся.</b> Его выдают участникам Nikon Professional Services. Служба выросла из отдела поддержки прессы, который Nikon создала после Олимпиады 1964 года в Токио. В Японии для вступления нужны доход от съёмки, поручитель из членов службы и минимум три профессиональные камеры и пять объективов.</p>
+        <p>Из-за подделок ремни стали нумеровать. На японских форумах б/у NPS-ремни уходили за 20–30 тысяч иен, а носить такой без членства там считают дурным тоном. На тех же форумах шутят: <em>«кто ходит по городу с NPS-ремнём, тот, скорее всего, не профи»</em>.</p>
+      </div>
+    </li>
+
+    <li class="card">
+      <figure class="ph">
+        <img src="img/straps/domke-gripper-fm.jpg" width="612" height="612" alt="Nikon FM с ремнём Domke Gripper">
+        <figcaption>Domke Gripper на Nikon FM. Фото: <a href="https://www.flickr.com/photos/54065287@N04/8628210392">awesomesther</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></figcaption>
+      </figure>
+      <div>
+        <div class="card-head"><span class="rank">2</span><span class="tag">работа</span></div>
+        <h3>Domke Gripper</h3>
+        <p><b>Ремень газетчиков.</b> В 1975 году Philadelphia Inquirer отобрал у фотографов закреплённые машины, и технику стало негде возить. Фотограф и редактор газеты Джим Домке сшил сумку по образцу рыболовной, а один из ветеранов редакции попросил ремень, который не сползает с плеча под весом. Так появился Gripper: в хлопковую ленту вплетены резиновые дорожки. Первые 800 сумок разошлись к лету 1976 года, сейчас марка принадлежит Tiffen.</p>
+      </div>
+    </li>
+
+    <li class="card">
+      <figure class="ph">
+        <img src="img/straps/an6w-an6y.jpg" width="1024" height="576" alt="Два широких ремня Nikon: винно-красный AN-6W и жёлтый AN-6Y">
+        <figcaption>AN-6W и AN-6Y. Фото: <a href="https://www.flickr.com/photos/27117418@N07/5924733971">hto2008</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">CC BY-NC 2.0</a></figcaption>
+      </figure>
+      <div>
+        <div class="card-head"><span class="rank">3</span><span class="tag">дизайн</span></div>
+        <h3>AN-6Y и AN-6W</h3>
+        <p><b>Широкие, около 5 см, ремни 1980-х с крупной надписью Nikon:</b> жёлтый с чёрной окантовкой (AN-6Y) и винно-красный с жёлтой (AN-6W). По воспоминаниям владельцев, они шли со многими камерами того десятилетия, и именно так многие до сих пор представляют себе «ремень Nikon».</p>
+      </div>
+    </li>
+
+    <li class="card">
+      <figure class="ph">
+        <img src="img/straps/nikon-f-thin-strap.jpg" width="960" height="642" alt="Хромированный Nikon F с тонким чёрным ремнём">
+        <figcaption>Nikon F выпуска 1971 года с тонким ремнём. Фото: <a href="https://commons.wikimedia.org/wiki/File:Nikon_F_-_1971_-_(22878744500).jpg">madras91</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></figcaption>
+      </figure>
+      <div>
+        <div class="card-head"><span class="rank">4</span><span class="tag">история</span></div>
+        <h3>Тонкая кожа эпохи Nikon F</h3>
+        <p><b>Узкий, около сантиметра, кожаный ремешок с защёлками.</b> Такой AN-1 указан в инструкции 1973 года для F, F2 и Nikkormat, а в каталоге 1978 года рядом с ним есть AN-3 из кожзама. Ремни этой ширины видны и на снимках из Вьетнама: две-три камеры на шее и никакой сумки.</p>
+      </div>
+    </li>
+
+    <li class="card">
+      <figure class="ph">
+        <img src="img/straps/upstrap.jpg" width="1024" height="765" alt="Ремень UPstrap с резиновой подушкой на зеркальной камере Nikon">
+        <figcaption>UPstrap на зеркалке Nikon. Фото: <a href="https://www.flickr.com/photos/70816538@N00/5677585014">Tim Wilson</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></figcaption>
+      </figure>
+      <div>
+        <div class="card-head"><span class="rank">5</span><span class="tag">плечо</span></div>
+        <h3>UPstrap</h3>
+        <p><b>Американский ремень с толстой резиновой подушкой,</b> которая не даёт тяжёлой камере соскользнуть с плеча. Его автор Эл Стегмейер начинал с того, что добавил резиновую накладку к ремню Nikon Professional Services. Обзоры появились в 2003 году, а в 2022-м компания объявила о сворачивании производства. По словам производителя, Джей Мейзел назвал UPstrap лучшим ремнём, каким он пользовался.</p>
+      </div>
+    </li>
+  </ol>
+
+  <p class="honor"><b>Ещё заслуживают места:</b> неопреновый <b>OP/TECH</b> (компания с 1982 года), слинг <b>BlackRapid</b> (2008), быстросъёмный <b>Peak Design Slide</b> (2014) и кожаные кистевые <b>Gordy's</b> (с 2005). Они описаны ниже, в своих эпохах.</p>
+</section>
+
+<section class="era" id="e1950">
+  <p class="era-years">1950-е · Nikon S, S2, SP</p>
+  <h2>Корея: объективы Nikkor на чужих камерах</h2>
+  <div class="era-sw"><span class="sw sw-unknown" style="max-width:700px"></span></div>
+  <div class="prose">
+    <p>В июне 1950 года токийский фотограф Дзюн Мики снял Дэвида Дугласа Дункана из LIFE объективом <b>Nikkor 85 мм</b>. Резкость отпечатка удивила Дункана, и вместе с фотографом Хорасом Бристолом он поехал на завод Nippon Kogaku за объективами. В Корее Дункан снимал на две <b>Leica IIIc</b>: одну с Nikkor 50 мм f/1.5, другую с Nikkor 135 мм f/3.5. На Nikkor перешли и его коллеги по LIFE Карл Майданс и Хэнк Уокер. Первым «репортажным Nikon» стали объективы на чужих камерах.</p>
+    <p><b>Про ремни этой эпохи источники молчат.</b> Дальномеры Nikon S, S2 и SP продавались в кожаных футлярах «всегда наготове»: нижняя половина прикручивалась к штативному гнезду, ремень крепился к футляру. Дункан, по воспоминаниям, брал минимум техники, а плёнку рассовывал по карманам. В 1965 году Nikon подарила ему <b>200-тысячный Nikon F</b> в благодарность за то, что он прославил марку.</p>
+  </div>
+  <div class="figs one narrow">
+    <figure>
+      <img src="img/straps/duncan-1950.jpg" width="500" height="629" alt="Дэвид Дуглас Дункан с дальномерной камерой у лица, Токио, 1950 год">
+      <figcaption>Дэвид Дуглас Дункан в Токио 10 июня 1950 года, накануне отъезда на корейскую войну.
+        <span class="credit">Фото: Дзюн Мики, <a href="https://commons.wikimedia.org/wiki/File:David_Douglas_Duncan_02,1950_,TokyoPhotograph_taken_by_Jun_Miki.jpg">общественное достояние</a></span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="era" id="e1960">
+  <p class="era-years">1959–1975 · Nikon F</p>
+  <h2>Вьетнам: тонкая кожа и никакой сумки</h2>
+  <div class="era-sw"><span class="sw sw-an1"></span></div>
+  <div class="prose">
+    <blockquote>«Большинство из нас снимали на Nikon, а Савада был лейковцем».<br>Дирк Холстед о Кёити Саваде</blockquote>
+    <p><b>Nikon F стал рабочей камерой этой войны,</b> и репортёры носили по две-три камеры сразу. Тим Пейдж описывал свой набор так: две Leica с 35 и 21 мм и Nikon F со 105 и 200 мм, а в сезон дождей ещё и подводный Nikonos.</p>
+    <p><b>Заводской ремень был узким.</b> У одной из камер Nikon в Смитсоновском музее американской истории сохранился ремень 99 × 1 см. По воспоминаниям владельцев, ремни к F были кожаными, чёрными или бордовыми. В 1970-х в каталоге Nikon были кожаный AN-1 и AN-3 из кожзама, оба с защёлками.</p>
+    <p><b>Сумок в бою, по воспоминаниям участников, не носили:</b> <em>«ничего, за что можно зацепиться»</em>. Блестящий хром, как вспоминает один ветеран, заклеивали чёрной или зелёной изолентой. Катрин Леруа привязывала свою Leica к шее шнурком от ботинка, а в боевой прыжок с парашютом в 1967 году взяла две камеры на шее. Дики Шапель, погибшая во Вьетнаме в 1965 году, прыгала со специальным подсумком для камер.</p>
+    <p><b>Самый известный Nikon F войны принадлежит Дону Маккаллину.</b> В 1970 году в камбоджийской провинции Прейвенг камера остановила пулю АК-47. У левого ушка видны остатки ремня.</p>
+  </div>
+  <div class="figs two">
+    <figure>
+      <img src="img/straps/faas-1965.jpg" width="960" height="1205" alt="Хорст Фаас стоит на транспорте среди солдат, камера висит на груди">
+      <figcaption>Хорст Фаас (Associated Press) с американскими войсками во Вьетнаме, март 1965 года. Камера на коротком ремне висит на груди.
+        <span class="credit">Фото: Associated Press, <a href="https://commons.wikimedia.org/wiki/File:Horst_Faas_in_March_1965.jpg">общественное достояние</a></span></figcaption>
+    </figure>
+    <figure>
+      <img src="img/straps/mccullin-nikon-f.jpg" width="599" height="599" alt="Повреждённый пулей корпус Nikon F Дона Маккаллина с остатками ремня у ушка">
+      <figcaption>Nikon F Дона Маккаллина со следом пули АК-47 (Камбоджа, 1970). Слева у ушка висят остатки ремня.
+        <span class="credit">Фото: <a href="https://www.flickr.com/photos/136879256@N02/22733202797">urcameras</a>, <a href="https://creativecommons.org/publicdomain/mark/1.0/">Public Domain Mark</a></span></figcaption>
+    </figure>
+  </div>
+  <div class="figs one">
+    <figure>
+      <img src="img/straps/ishikawa-nikon-f.jpg" width="960" height="640" alt="Nikon F Photomic фотографа Бунъё Исикавы в музейной витрине">
+      <figcaption>Nikon F Photomic японского фотографа Бунъё Исикавы. Он снимал с ним войну в 1965–1968 годах, а в 1999-м передал камеру в Музей остатков войны в Хошимине.
+        <span class="credit">Фото: <a href="https://commons.wikimedia.org/wiki/File:Nikon_F_of_Bunyo_Ishikawa_WAR_REMNANTS_MUSEUM_Bao_Tang_Chung_Tich_Chien_Tranh_%E6%88%A6%E4%BA%89%E8%A8%BC%E8%B7%A1%E5%8D%9A%E7%89%A9%E9%A4%A8%EF%BC%88%E3%83%9B%E3%83%BC%E3%83%81%E3%83%9F%E3%83%B3%EF%BC%89_DSCF9947.JPG">松岡明芳</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="era" id="e1970">
+  <p class="era-years">1971–1980 · Nikon F2</p>
+  <h2>Нейлон, моторы и сумка Domke</h2>
+  <div class="era-sw"><span class="sw sw-an4"></span></div>
+  <div class="prose">
+    <p><b>Первые F2 ещё шли с узкой кожей:</b> владелец F2AS 1977 года вспоминает ремешок шириной около 1,3 см. В каталоге аксессуаров Nippon Kogaku 1978 года появляются нейлоновые <b>AN-4B</b> (полностью чёрный) и <b>AN-4Y</b> (чёрный с жёлтыми полосами). Оба тканые: широкие посередине и узкие у креплений.</p>
+    <p><b>Репортажная классика тех лет</b> — F2 с мотором MD-2 и кистевым ремнём AH-1 на площадке. Такую связку держат одной рукой, как рукоятку. В 1975–1976 годах в Филадельфии появились сумки Domke и ремень Gripper, о них выше, в рейтинге.</p>
+    <p>Nikon F2 турецкого журналиста <b>Эргина Конуксевера</b>, снимавшего военную операцию на Кипре в 1974 году, хранится в Военном музее Харбие в Стамбуле вместе с потёртым тканевым ремнём и кожаным тубусом для объектива.</p>
+  </div>
+  <div class="figs two">
+    <figure>
+      <img src="img/straps/konuksever-f2.jpg" width="960" height="1120" alt="Nikon F2 журналиста Эргина Конуксевера с тканевым ремнём в музейной витрине">
+      <figcaption>Nikon F2 Эргина Конуксевера (Кипр, 1974) в Военном музее Харбие, Стамбул.
+        <span class="credit">Фото: <a href="https://commons.wikimedia.org/wiki/File:Journalist_Ergin_Konuksever%27s_Nikon_F2,_Istanbul_Harbiye_Military_Museum1_2024.jpg">Karakalem</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span></figcaption>
+    </figure>
+    <figure>
+      <img src="img/straps/f2-motor-hand-strap.jpg" width="1024" height="801" alt="Nikon F2 с мотором MD-2 и кистевым ремнём AH-1">
+      <figcaption>Nikon F2 с мотором MD-2, батарейным блоком MB-1 и кистевым ремнём AH-1.
+        <span class="credit">Фото: <a href="https://www.flickr.com/photos/50560051@N04/25235515212">wolf4max</a>, <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND 2.0</a></span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="era" id="e1980">
+  <p class="era-years">1980–1988 · F3, FM2, FE2</p>
+  <h2>Широкие ремни с большой надписью</h2>
+  <div class="era-sw"><span class="sw-pair"><span class="sw sw-an6y"></span><span class="sw sw-an6w"></span></span></div>
+  <div class="prose">
+    <p><b>В 1980-е «лицом» ремня Nikon стали широкие AN-6Y и AN-6W.</b> Какой ремень лежал в коробке с F3, владельцы спорят до сих пор: кто-то получил камеру без ремня, кто-то с бордовым нейлоновым. Один из участников форума Photrio подытоживает: <em>«AN-4B и AN-6Y шли с кучей Nikon 80-х»</em>.</p>
+    <p>Стив Маккарри снял «Афганскую девочку» (1984) на <b>FM2</b> с Nikkor 105 мм f/2.5 на Kodachrome 64. В 1982 году в Джексон-Хоуле (Вайоминг) появилась <b>OP/TECH USA</b>; позже она прославилась неопреновыми ремнями, которые пружинят и снимают вес с шеи. Свой Fashion Strap компания называет первым неопреновым ремнём для камеры.</p>
+    <p>Примерно тогда же, по воспоминаниям японских фотографов, появился первый ремень NPS, жёлтый.</p>
+  </div>
+  <div class="figs two">
+    <figure>
+      <img src="img/straps/an6y-closeup.jpg" width="1024" height="680" alt="Жёлтый ремень Nikon AN-6Y крупным планом">
+      <figcaption>AN-6Y крупным планом: жёлтая тканая лента с чёрной окантовкой.
+        <span class="credit">Фото: <a href="https://www.flickr.com/photos/30880820@N07/4279429626">Luke Hayfield</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></span></figcaption>
+    </figure>
+    <figure>
+      <img src="img/straps/optech-pro.jpg" width="1024" height="683" alt="Неопреновый ремень OP/TECH USA Pro Strap">
+      <figcaption>OP/TECH USA Pro Strap: неопрен вместо тканой ленты.
+        <span class="credit">Фото: <a href="https://www.flickr.com/photos/23245423@N05/6928706229">rok1966</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="era" id="e1990">
+  <p class="era-years">1988–2006 · F4, F5, F6 и NPS</p>
+  <h2>Эпоха NPS</h2>
+  <div class="era-sw"><span class="sw-pair"><span class="sw sw-an14"></span><span class="sw sw-nps"></span></span></div>
+  <div class="prose">
+    <p>К <b>F5</b> (1996) прилагался <b>AN-14</b>: бордовый ремень шириной около 2,5 см с жёлтым логотипом. К <b>F6</b> (2004) шёл <b>AN-19</b>, чёрный с жёлтой надписью «Nikon F6». Какой ремень лежал в коробке F4, подтвердить не удалось: магазины продают AN-6Y и AN-6W с гравированными пряжками как «родные для F4», но документов нет.</p>
+    <p><b>NPS</b> — служба Nikon для профессионалов: срочный ремонт, подменная техника, поддержка на Олимпиадах. К Играм 1980 года в Лейк-Плэсиде она уже работала под этим именем. В США условия мягче японских: две профессиональные камеры и два объектива, базовый уровень бесплатный.</p>
+    <p><b>Дизайн ремня менялся вместе с камерами.</b> По воспоминаниям японских фотографов: в начале 80-х он был жёлтым, около 1988–1990 годов чёрным, у F5 и F100 с жёлтым логотипом, у цифровых D1 синим, у D2X и D3 чёрно-серебристым, в эпоху Z9 с жёлтой полосой. Воспоминания расходятся в деталях. Надпись «NPS | NIKON PROFESSIONAL SERVICES» зарегистрирована как торговая марка в 2015 году. В США был и свой вариант: чёрная лента шириной 2,5 см с белой надписью, сделанная Domke.</p>
+    <p><b>UPstrap вырос прямо из NPS-ремня:</b> Эл Стегмейер добавил к нему резиновую подушку, и к 2003 году ремень уже продавался.</p>
+  </div>
+  <div class="figs one">
+    <figure>
+      <img src="img/straps/d4-for-professional.jpg" width="960" height="640" alt="Nikon D4 с чёрным ремнём с надписью Nikon For PROFESSIONAL">
+      <figcaption>Nikon D4 (2012) с ремнём «Nikon For PROFESSIONAL». По словам японских владельцев, такие «профессиональные» ремни продавались и в рознице, подделок тоже много. Настоящий NPS выдают только членам службы.
+        <span class="credit">Фото: <a href="https://commons.wikimedia.org/wiki/File:Nikon_D4_20150213.jpg">Gene Wang</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="era" id="e2007">
+  <p class="era-years">2007–2026 · D3, D4, D5, D6, Z9</p>
+  <h2>Флагманы, слинги и ремни без логотипа</h2>
+  <div class="era-sw"><span class="sw sw-dser"></span></div>
+  <div class="prose">
+    <p><b>Штатные ремни цифровых флагманов почти не менялись:</b> чёрная лента шириной около 4,5 см с жёлтым названием модели или жёлтой строчкой. D3 комплектовался AN-D3, D4 — AN-DC7, D5 — AN-DC15, D6 — AN-DC22, Z9 — AN-DC24 с надписью «Nikon Z».</p>
+    <p><b>Одновременно ремень перестал быть обязательно шейным.</b> BlackRapid (2008, свадебный фотограф Рон Генри из Сиэтла) повесил камеру на слинг через плечо. HoldFast (2011, Мэттью Свэггарт) сделал кожаную двойную «сбрую» MoneyMaker. Peak Design (основана в 2010-м, ремень Slide вышел в 2014-м) придумала быстросъёмные крепления на ушки.</p>
+    <p><b>В опасных местах многие снимают фирменные ремни.</b> Руководство по безопасности Комитета защиты журналистов (CPJ) советует носить технику в неприметных сумках, а Кен Роквелл писал, что ремень с надписью NIKON или CANON выделяет вас в толпе для воров. Алекс Кюни снимал в Мосуле на D5 и D810/D850 с двойной разгрузкой OP/TECH Double Sling.</p>
+  </div>
+  <div class="figs one">
+    <figure>
+      <img src="img/straps/cairo-2012.jpg" width="1023" height="683" alt="Фотожурналист в противогазе снимает в дыму на улице Каира">
+      <figcaption>Фотожурналист в противогазе на улице Мансур в Каире, февраль 2012 года.
+        <span class="credit">Фото: <a href="https://www.flickr.com/photos/59952459@N08/7620475070">alisdare1</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></span></figcaption>
+    </figure>
+  </div>
+  <div class="figs two">
+    <figure>
+      <img src="img/straps/leather-harness-kit.jpg" width="1024" height="768" alt="Раскладка: две камеры Nikon, объективы, вспышки и кожаная двойная разгрузка">
+      <figcaption>Две камеры Nikon и кожаная двойная «сбруя» вместо шейных ремней.
+        <span class="credit">Фото: <a href="https://www.flickr.com/photos/169477637@N08/49715198623">joabsmithphotography</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></span></figcaption>
+    </figure>
+    <figure>
+      <img src="img/straps/gordys-df.jpg" width="720" height="1033" alt="Nikon Df с кожаным кистевым ремнём Gordy's">
+      <figcaption>Кожаный кистевой ремень Gordy's на Nikon Df.
+        <span class="credit">Фото: <a href="https://commons.wikimedia.org/wiki/File:GORDYS_WRIST_STRAP_ON_NIKON_Df_(29193160962).jpg">David S. Ferry III</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></span></figcaption>
+    </figure>
+    <figure>
+      <img src="img/straps/peak-design.jpg" width="960" height="640" alt="Крепления ремня Peak Design на ушках камеры">
+      <figcaption>Peak Design: быстросъёмные крепления на ушках.
+        <span class="credit">Фото: <a href="https://commons.wikimedia.org/wiki/File:Peak_Design_Camera_Strap_(42059488881).jpg">Tony Webster</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></span></figcaption>
+    </figure>
+    <figure>
+      <img src="img/straps/blackrapid.jpg" width="640" height="640" alt="Слинг BlackRapid с карабином">
+      <figcaption>BlackRapid: слинг через плечо, камера крепится за штативное гнездо.
+        <span class="credit">Фото: <a href="https://www.flickr.com/photos/135513771@N05/20011231404">CamSessories_UK</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="era" id="models">
+  <p class="era-years">Шпаргалка</p>
+  <h2>Заводские ремни Nikon по артикулам</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Модель</th><th>Цвет</th><th>Камера или год</th><th>Как выглядит</th></tr></thead>
+      <tbody>
+        <tr><td>AN-1</td><td class="sample"><span class="sw sw-an1"></span></td><td>F, F2, Nikkormat; инструкция 1973 г.</td><td>Узкая кожа, защёлки</td></tr>
+        <tr><td>AN-3</td><td class="sample"><span class="sw sw-an1"></span></td><td>Каталог 1978 г.</td><td>Кожзам, защёлки</td></tr>
+        <tr><td>AN-4B</td><td class="sample"><span class="sw sw-dser" style="height:20px"></span></td><td>Каталог 1978 г., многие камеры 80-х</td><td>Чёрный тканый нейлон, шире посередине</td></tr>
+        <tr><td>AN-4Y</td><td class="sample"><span class="sw sw-an4"></span></td><td>Каталог 1978 г.</td><td>Чёрный с жёлтыми полосами; поздние версии ярко-жёлтые</td></tr>
+        <tr><td>AN-6Y</td><td class="sample"><span class="sw sw-an6y" style="height:28px"></span></td><td>1980-е</td><td>Широкий, жёлтый с чёрной окантовкой, логотип Nikon</td></tr>
+        <tr><td>AN-6W</td><td class="sample"><span class="sw sw-an6w" style="height:28px"></span></td><td>1980-е</td><td>Широкий, винно-красный с жёлтым логотипом</td></tr>
+        <tr><td>AN-14</td><td class="sample"><span class="sw sw-an14"></span></td><td>F5, 1996</td><td>Бордовый, ≈ 2,5 см, жёлтый логотип</td></tr>
+        <tr><td>AN-19</td><td class="sample"><span class="sw sw-dser" style="height:20px"></span></td><td>F6, 2004</td><td>Чёрный, жёлтая надпись «Nikon F6»</td></tr>
+        <tr><td>AN-D3</td><td class="sample"><span class="sw sw-dser" style="height:28px"></span></td><td>D3, 2007</td><td>Чёрный, ≈ 4,5 см, жёлтая строчка</td></tr>
+        <tr><td>AN-DC7</td><td class="sample"><span class="sw sw-dser" style="height:28px"></span></td><td>D4, 2012</td><td>Чёрный, жёлтая надпись «Nikon D4»</td></tr>
+        <tr><td>AN-DC15</td><td class="sample"><span class="sw sw-dser" style="height:28px"></span></td><td>D5, 2016</td><td>Чёрный, жёлтая надпись «Nikon D5»</td></tr>
+        <tr><td>AN-DC22</td><td class="sample"><span class="sw sw-dser" style="height:28px"></span></td><td>D6, 2020</td><td>Чёрный, ≈ 4,5 см, жёлтая строчка</td></tr>
+        <tr><td>AN-DC24</td><td class="sample"><span class="sw sw-dser" style="height:28px"></span></td><td>Z9, 2021</td><td>Чёрный, жёлтая надпись «Nikon Z»</td></tr>
+        <tr><td>NPS</td><td class="sample"><span class="sw sw-nps" style="height:28px"></span></td><td>Только членам NPS</td><td>Чёрно-жёлтый, дизайн менялся с поколениями камер</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">AN-DC1 к профессиональным не относится: он шёл с любительскими D40–D90 и D7000. Модель, шедшая с Nikon F в 1959 году, и ремень из коробки F4 по документам не подтверждены.</p>
+</section>
+
+<section class="era" id="tips">
+  <p class="era-years">Практика</p>
+  <h2>Приёмы, которые пережили эпохи</h2>
+  <ul class="tips">
+    <li><b>Ремни разной длины.</b> Если на тебе две камеры, один ремень длиннее, другой короче, и камеры не бьются друг о друга. Этот совет даёт, например, фотограф Гарет Уоткинс.</li>
+    <li><b>Никакой сумки в бою.</b> Камеры на шее, плёнка или карты в карманах. Так работали и Дункан в Корее, и репортёры во Вьетнаме.</li>
+    <li><b>Изолента.</b> Хром, а сегодня и логотипы заклеивают, чтобы камера не бликовала и не привлекала внимания.</li>
+    <li><b>Кистевой ремень.</b> Тяжёлую связку с мотором или телевиком держат за кистевой ремень, как AH-1 у F2, а шейный остаётся страховкой.</li>
+    <li><b>Без бренда.</b> В толпе и в зонах конфликтов неприметный ремень безопаснее фирменного: об этом пишут и CPJ, и Кен Роквелл.</li>
+  </ul>
+</section>
+
+<section class="era" id="sources">
+  <p class="era-years">Проверка</p>
+  <h2>Источники</h2>
+  <div class="sources">
+    <h3>Люди и эпохи</h3>
+    <ol>
+      <li><a href="https://imaging.nikon.com/imaging/information/story/0036/">Nikon: как Дункан открыл Nikkor</a></li>
+      <li><a href="https://mikeeckman.com/2018/06/the-rotoloni-report-2-david-douglas-duncan/">Mike Eckman, The Rotoloni Report: David Douglas Duncan</a></li>
+      <li><a href="https://www.bandwmag.com/articles/david-douglas-duncan-the-making-of-a-master">B&amp;W Magazine: David Douglas Duncan, the making of a master</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/David_Douglas_Duncan">Wikipedia: David Douglas Duncan (200-тысячный Nikon F)</a></li>
+      <li><a href="https://www.nikonownermagazine.com/findout/magazine/issue_015/history.php">Nikon Owner: Майданс и Уокер переходят на Nikkor</a></li>
+      <li><a href="https://digitaljournalist.org/issue9711/req12.htm">The Digital Journalist: Dirck Halstead о Кёити Саваде</a></li>
+      <li><a href="https://www.wsws.org/en/articles/2019/11/14/page-n14.html">WSWS: Tim Page о своём снаряжении</a></li>
+      <li><a href="https://www.americanheritage.com/catherine-leroy-parachutes-danger">American Heritage: Catherine Leroy</a></li>
+      <li><a href="https://wisconsinhistory.org/Records/Image/IM119568">Wisconsin Historical Society: Dickey Chapelle</a></li>
+      <li><a href="https://www.nybooks.com/online/2019/03/15/don-mccullins-art-of-war/">NYRB: Don McCullin’s art of war</a></li>
+      <li><a href="https://www.tate.org.uk/press/press-releases/don-mccullin-1">Tate: ретроспектива Маккаллина (камера в экспозиции)</a></li>
+      <li><a href="https://americanhistory.si.edu/collections/object/nmah_1837079">Smithsonian NMAH: Nikon с ремнём 39 × 3/8 дюйма</a></li>
+      <li><a href="https://www.photrio.com/forum/threads/nikon-f-and-the-vietnam-war.110029/page-2">Photrio: Nikon F and the Vietnam War</a></li>
+      <li><a href="https://groups.google.com/g/rec.photo.equipment.35mm/c/M9DR9q_K3Fs">rec.photo.equipment.35mm: изолента на хроме</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Afghan_Girl">Wikipedia: Afghan Girl (FM2, 105 мм, Kodachrome 64)</a></li>
+      <li><a href="https://shotkit.com/alex-kuhni/">Shotkit: Alex Kühni</a></li>
+      <li><a href="https://shotkit.com/gareth-watkins/">Shotkit: Gareth Watkins</a></li>
+      <li><a href="https://cpj.org/wp-content/uploads/2020/05/guide.pdf">CPJ Journalist Safety Guide (PDF)</a></li>
+      <li><a href="https://www.kenrockwell.com/tech/straps.htm">Ken Rockwell: Camera straps</a></li>
+    </ol>
+    <h3>Ремни Nikon и NPS</h3>
+    <ol>
+      <li><a href="https://www.pacificrimcamera.com/rl/00373/00373.pdf">Каталог аксессуаров Nippon Kogaku, 1978 (PDF): AN-1, AN-3, AN-4B, AN-4Y</a></li>
+      <li><a href="https://www.pacificrimcamera.com/pp/nikonrfcases.htm">Pacific Rim Camera: футляры дальномеров Nikon</a></li>
+      <li><a href="https://www.photrio.com/forum/threads/original-strap-for-nikon-f3.89419/">Photrio: какой ремень шёл с F3</a></li>
+      <li><a href="https://www.photrio.com/forum/threads/camera-straps-through-the-ages.124359/">Photrio: Camera straps through the ages</a></li>
+      <li><a href="https://www.nikonusa.com/p/an-4y-nylon-neck-strap-yellow/638/overview">Nikon USA: AN-4Y</a></li>
+      <li><a href="https://www.bhphotovideo.com/c/product/37067-REG/Nikon_4507_AN_6Y_Wide_Nylon_Neckstrap.html">B&amp;H: AN-6Y</a></li>
+      <li><a href="https://www.keh.com/shop/nikon-autofocus-neck-1-wide-maroon-f5-662359.html">KEH: AN-14 к F5</a></li>
+      <li><a href="https://www.nikonusa.com/p/an-19-strap/4778/overview">Nikon USA: AN-19 к F6</a></li>
+      <li><a href="https://www.keh.com/shop/nikon-digital-neck-1-75-black-yellow-stitch-d3-an-d3-231100.html">KEH: AN-D3</a></li>
+      <li><a href="https://en.nikon.ca/p/an-dc7-strap/27053/overview">Nikon Canada: AN-DC7 к D4</a></li>
+      <li><a href="https://www.nikonusa.com/p/an-dc15-strap/27167">Nikon USA: AN-DC15 к D5</a></li>
+      <li><a href="https://www.keh.com/shop/nikon-neck-strap-1-75-black-yellow-stitch-d6-an-dc22.html">KEH: AN-DC22 к D6</a></li>
+      <li><a href="https://www.nikonusa.com/en/nikon-products/product/straps/an-dc24-camera-strap.html">Nikon USA: AN-DC24 к Z9</a></li>
+      <li><a href="https://www.bhphotovideo.com/c/product/381574-REG/Nikon_25322_AN_DC1_Camera_Strap.html">B&amp;H: AN-DC1</a></li>
+      <li><a href="https://dc.watch.impress.co.jp/docs/column/proservice/1139660.html">DC Watch: история и условия NPS (яп.)</a></li>
+      <li><a href="https://www.jp.nikon.com/company/news/2010/1109_nps_01/">Nikon, 2010: полвека NPS (яп.)</a></li>
+      <li><a href="https://www.nikonusa.com/content/nps">Nikon USA: NPS</a></li>
+      <li><a href="https://kosmofoto.com/2020/08/the-nikon-olympic-embassy-built-in-the-heart-of-soviet-russia/">Kosmo Foto: NPS на Олимпиаде 1980 года</a></li>
+      <li><a href="https://ameblo.jp/kengoshima/entry-12728270628.html">KEN Goshima: поколения NPS-ремней (яп.)</a></li>
+      <li><a href="https://ameblo.jp/r31sakahogi/entry-12949192413.html">sakahogi: как менялись NPS-ремни (яп.)</a></li>
+      <li><a href="https://bbs.kakaku.com/bbs/K0000328868/SortID=14510737/">kakaku.com: обсуждение NPS-ремней (яп.)</a></li>
+      <li><a href="https://ameblo.jp/hachisaka/entry-12454020829.html">hachisaka: розничные «for PROFESSIONAL» (яп.)</a></li>
+      <li><a href="https://trademarks.justia.com/855/38/nps-nikon-professional-85538219.html">Justia: торговая марка NPS | NIKON PROFESSIONAL SERVICES</a></li>
+      <li><a href="https://www.keh.com/shop/strap-blk-fiber-mk-d-nikon-prof-service-nps-1.html">KEH: американский NPS-ремень работы Domke</a></li>
+    </ol>
+    <h3>Другие ремни</h3>
+    <ol>
+      <li><a href="https://www.cameraworld.co.uk/jimdomke">Jim Domke: как появилась сумка Domke</a></li>
+      <li><a href="https://www.thebroadcastbridge.com/content/entry/293/camera-bags-and-cases-the-unlikely-story-of-an-essential-imaging-tool">The Broadcast Bridge: история сумок для камер</a></li>
+      <li><a href="https://tiffen.com/products/domke-1-5-gripper-strap">Tiffen: Domke Gripper</a></li>
+      <li><a href="https://journeycamera.com/about-upstrap">UPstrap: об авторе</a></li>
+      <li><a href="https://the-gadgeteer.com/2003/10/20/upstrap_non_slip_replacement_shoulder_straps_review/">The Gadgeteer: обзор UPstrap, 2003</a></li>
+      <li><a href="https://www.shutterbug.com/content/upstrap-products-approaching-sunset">Shutterbug: UPstrap сворачивает производство, 2022</a></li>
+      <li><a href="https://www.optechusa.com/pages/who-we-are">OP/TECH USA: о компании</a></li>
+      <li><a href="https://www.blackrapid.com/blackrapid-founder-spotlight-ron-henry-live-the-moment/">BlackRapid: основатель Рон Генри</a></li>
+      <li><a href="https://fstoppers.com/reviews/exclusive-interview-holdfast-gear-founder-matthew-swaggart-photography-and-9294">Fstoppers: интервью с основателем HoldFast</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Peak_Design">Wikipedia: Peak Design</a></li>
+      <li><a href="https://gordyscamerastraps.com/pages/since-2005-new">Gordy's Camera Straps</a></li>
+    </ol>
+  </div>
+  <p class="foot">Все фотографии на странице взяты под свободными лицензиями или из общественного достояния; автор и лицензия указаны в подписи к каждой. Страница собрана 30 сентября 2026 года. Это неофициальная фан-страница, с компанией Nikon она не связана.</p>
+</section>
+
+</div>
+<script src="assets/menu.js"></script>
+</body>
+</html>

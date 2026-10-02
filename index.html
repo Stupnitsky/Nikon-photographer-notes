@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>NIKKOR Z System Lenses</title>
+<meta name="description" content="All 49 NIKKOR Z lenses in one sortable table: type, focal length, aperture, series, format, release date and US price. A fan-made page.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Onest:wght@400;600;700;800&display=swap">
+<style>
+  /* base: the page was first published as a Claude artifact, whose shell set these */
+  :root{color-scheme:light}
+  body{margin:0;font-size:14px}
+  img{max-width:100%}
+  [hidden]{display:none!important}
+</style>
+<style>
+  :root{
+    color-scheme:light;
+    --white:#FFFFFF;
+    --ink:#000000;
+    --grey-1:#F4F4F4;
+    --grey-2:#E4E4E4;
+    --grey-3:#767676;
+    --yellow:#FFE100;
+    --sale:#C8102E;
+    --dark:#1D1D1D;
+  }
+  *{box-sizing:border-box}
+  html,body{background:var(--white)}
+  body{
+    color:var(--ink);
+    font-family:"Figtree","Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .navbar{position:sticky;top:0;z-index:20;background:var(--ink);color:var(--white)}
+  .navbar-inner{
+    max-width:1080px;margin:0 auto;padding:12px 20px;
+    display:flex;align-items:center;gap:22px;flex-wrap:wrap;justify-content:space-between;
+    padding-top:16px;
+  }
+  .brand strong{display:block;font-size:16px;font-weight:700;letter-spacing:-.01em}
+  .brand span{display:block;font-size:12.5px;color:#C9C9C9;margin-top:2px;font-variant-numeric:tabular-nums}
+  .navgroups{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+  .navgroup{display:flex;align-items:center;gap:20px}
+  .glabel{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:#8C8C8C;font-weight:700}
+  .navitem{
+    background:none;border:none;color:var(--white);font:inherit;font-size:13px;font-weight:800;
+    letter-spacing:.13em;text-transform:uppercase;padding:2px 0 10px;cursor:pointer;
+    border-bottom:3px solid transparent;line-height:1.1;
+  }
+  .navitem:hover{color:var(--yellow)}
+  .navitem[aria-pressed="true"]{border-bottom-color:var(--yellow)}
+  .navitem:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+  .pill{
+    background:var(--yellow);color:var(--ink);border:none;border-radius:999px;
+    padding:11px 26px;font:inherit;font-size:12.5px;font-weight:800;letter-spacing:.1em;
+    text-transform:uppercase;cursor:pointer;white-space:nowrap;
+  }
+  .pill:hover{background:#F5D700}
+  .pill:focus-visible{outline:2px solid var(--white);outline-offset:3px}
+
+  .hero{background:var(--ink);color:var(--white);padding:74px 20px 66px;text-align:center}
+  .hero h1{
+    font-size:clamp(40px,7.4vw,84px);font-weight:800;line-height:1.02;letter-spacing:-.028em;
+    margin:0 auto;max-width:16ch;text-wrap:balance;
+  }
+  .hero p{
+    margin:26px auto 0;max-width:60ch;font-size:clamp(15px,1.6vw,19px);
+    color:var(--white);font-weight:400;
+  }
+  .hero a{color:var(--yellow);text-decoration:underline;text-underline-offset:3px}
+  .hero .fine{margin-top:22px;font-size:12.5px;color:#B9B9B9;max-width:76ch}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px 0}
+
+  header{padding:44px 0 26px;border-bottom:1px solid var(--grey-2)}
+  h2.section{
+    font-size:clamp(24px,3.4vw,34px);font-weight:800;letter-spacing:-.02em;
+    margin:0 0 12px;text-wrap:balance;
+  }
+  .lede{max-width:70ch;color:var(--grey-3);font-size:14.5px;margin:0}
+  .kicker{
+    font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey-3);
+    font-weight:700;margin-bottom:14px;
+  }
+
+  .barline{
+    display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;
+    padding:22px 0 14px;
+  }
+  .results{font-size:20px;font-weight:700}
+  .results span{color:var(--grey-3);font-weight:400;font-size:14px}
+
+
+  .tablebox{overflow-x:auto}
+  table{border-collapse:collapse;width:100%;min-width:760px}
+  th,td{text-align:left;padding:18px 14px 18px 0;white-space:nowrap;vertical-align:middle}
+  th:first-child,td:first-child{padding-left:2px}
+  thead th{
+    padding-top:0;padding-bottom:12px;
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--grey-3);
+    cursor:pointer;user-select:none;border-bottom:1px solid var(--grey-2);
+  }
+  thead th .arrow{margin-left:6px;font-size:9px}
+  thead th[data-active="1"]{color:var(--ink);box-shadow:inset 0 -2px 0 var(--yellow)}
+  thead th:hover{color:var(--ink)}
+  thead th:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
+  tbody td{border-bottom:1px solid var(--grey-2);font-size:14px;color:#5A5A5A}
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:hover td{background:#FCFCFC}
+  td.name{white-space:normal;min-width:230px;width:34%;font-weight:700;font-size:16px;color:var(--ink);line-height:1.3}
+  .num{font-variant-numeric:tabular-nums}
+  td.price{font-variant-numeric:tabular-nums;font-weight:700;font-size:15px;color:var(--ink);text-align:right;padding-right:2px}
+  td.price small{display:block;font-weight:400;font-size:12px;color:var(--grey-3);text-decoration:line-through;margin-top:2px}
+  .saletag{
+    display:block;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--sale);margin-bottom:2px;
+  }
+  .sline{font-weight:700;color:var(--ink)}
+  .sline::before{content:"★";color:var(--yellow);margin-right:5px;font-weight:400}
+  .dash{color:#C4C4C4}
+  .owned{
+    display:inline-block;width:11px;height:11px;border-radius:50%;
+    background:var(--yellow);margin-left:10px;vertical-align:1px;
+  }
+
+  .panel-dark{background:var(--ink);color:var(--white);margin-top:72px;padding:88px 0 96px}
+  .panel-dark .col{max-width:46ch}
+  .panel-dark h2{
+    font-size:clamp(32px,5.2vw,56px);font-weight:800;line-height:1.05;letter-spacing:-.028em;
+    margin:0 0 26px;max-width:12ch;text-wrap:balance;
+  }
+  .panel-dark p{margin:0;font-size:15.5px;line-height:1.75;color:#E4E4E4}
+
+  .panel-light{background:var(--white);padding:92px 0 96px;text-align:center}
+  .panel-light h2{
+    font-size:clamp(30px,5vw,54px);font-weight:800;line-height:1.05;letter-spacing:-.028em;
+    margin:0 auto 24px;max-width:18ch;text-wrap:balance;
+  }
+  .panel-light p{margin:0 auto;max-width:62ch;font-size:15.5px;line-height:1.75;color:#4A4A4A}
+  .panel-light .kicker{margin-bottom:18px}
+  .figure{
+    margin:52px auto 0;max-width:62ch;display:grid;grid-template-columns:1fr 1fr;
+    border-top:1px solid var(--grey-2);
+  }
+  .figure div{padding:26px 20px;text-align:left}
+  .figure div + div{border-left:1px solid var(--grey-2)}
+  .figure b{display:block;font-size:clamp(24px,3.4vw,34px);font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .figure span{font-size:13px;color:var(--grey-3);display:block;margin-top:4px}
+
+  footer{background:var(--ink);color:#9A9A9A;font-size:12px;padding:26px 20px;text-align:center}
+  footer a{color:var(--yellow);text-decoration:underline;text-underline-offset:3px}
+
+  @media (max-width:620px){
+    .figure{grid-template-columns:1fr}
+    .figure div + div{border-left:none;border-top:1px solid var(--grey-2)}
+    .figure div{padding-left:0}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<link rel="stylesheet" href="assets/menu.css">
+<style>
+  /* the filter bar sticks under the site menu on wide screens; on narrow screens it wraps into many rows, so it scrolls away */
+  @media (min-width:900px){ .navbar{top:120px} }
+  @media (max-width:899px){ .navbar{position:relative} }
+  #lenses,#sline,#trios{scroll-margin-top:210px}
+  @media (max-width:899px){ #lenses,#sline,#trios{scroll-margin-top:100px} }
+</style>
+</head>
+<body>
+<div class="mz-backdrop" id="mz-back"></div>
+<div class="mz" id="mz" lang="ru">
+  <div class="mz-row">
+    <div class="mz-name">
+      <a class="mz-logo" href="index.html">Музей фана Nikon</a>
+      <span class="mz-page"><span class="mz-slash">/ </span>Объективы NIKKOR Z</span>
+    </div>
+    <button class="mz-burger" id="mz-burger" type="button" aria-expanded="false" aria-controls="mz-panel" aria-label="Открыть меню"><span></span><span></span></button>
+  </div>
+  <nav class="mz-panel" id="mz-panel" aria-label="Меню сайта">
+    <div class="mz-in">
+      <div class="mz-grid">
+        <div class="mz-col">
+          <p class="mz-h">Разделы</p>
+        <a class="mz-link" href="index.html" aria-current="page">Объективы NIKKOR Z</a>
+        <a class="mz-link" href="straps.html">Ремни репортёров</a>
+        </div>
+        <div class="mz-col">
+          <p class="mz-h">На этой странице</p>
+        <a class="mz-link" href="#lenses">Таблица объективов</a>
+        <a class="mz-link" href="#sline">Что значит S-Line</a>
+        <a class="mz-link" href="#trios">Две тройки f/2.8</a>
+        </div>
+        <div class="mz-col mz-fig">
+          <b>49</b>
+          <span>объективов в таблице, 24 из них S-Line</span>
+        </div>
+      </div>
+      <a class="mz-cta" href="straps.html">
+        <span class="mz-cta-t">Ремни репортёров</span>
+        <span class="mz-cta-go"><span class="mz-go-t">Открыть страницу</span><span class="mz-arr" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="butt" stroke-linejoin="miter"/></svg></span></span>
+        <span class="mz-cta-cur"><canvas aria-hidden="true"></canvas><span class="mz-cta-s">От Кореи до Z9</span><span class="mz-arr" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="butt" stroke-linejoin="miter"/></svg></span></span>
+      </a>
+    </div>
+  </nav>
+</div>
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="brand">
+      <strong>NIKKOR Z Series System Lenses</strong>
+      <span id="brandCount">49 lenses</span>
+    </div>
+    <div class="navgroups">
+      <div class="navgroup" id="segType">
+        <span class="glabel">Type</span>
+        <button class="navitem" data-v="all" aria-pressed="true">All</button>
+        <button class="navitem" data-v="zoom" aria-pressed="false">Zoom</button>
+        <button class="navitem" data-v="prime" aria-pressed="false">Prime</button>
+      </div>
+      <div class="navgroup" id="segLine">
+        <span class="glabel">Series</span>
+        <button class="navitem" data-v="all" aria-pressed="true">All</button>
+        <button class="navitem" data-v="s" aria-pressed="false">S-Line</button>
+        <button class="navitem" data-v="nons" aria-pressed="false">Non S</button>
+      </div>
+      <div class="navgroup" id="segFmt">
+        <span class="glabel">Format</span>
+        <button class="navitem" data-v="all" aria-pressed="true">All</button>
+        <button class="navitem" data-v="FX" aria-pressed="false">FX</button>
+        <button class="navitem" data-v="DX" aria-pressed="false">DX</button>
+      </div>
+      <button class="pill" id="reset">Reset filters</button>
+    </div>
+  </div>
+</div>
+
+<div class="hero">
+  <h1>Mirrorless Z Lenses</h1>
+  <p>The complete NIKKOR Z lens system for Z series mirrorless cameras: 49 lenses covering 12mm to 800mm, 24 of them S-Line. Engineered around the wide Z Mount for edge-to-edge resolution, minimal distortion and maximum apertures to f/0.95.</p>
+</div>
+
+<div class="wrap">
+  <header id="lenses">
+    <div class="kicker">Lenses / Mirrorless Lenses</div>
+    <h2 class="section">NIKKOR Z Series System Lenses</h2>
+    <p class="lede">Sort the results by selecting a column heading: lens type, focal length, maximum aperture or price. Use the filters to narrow the results by lens type, lens series and image format. Prices shown are Nikon USA retail; a struck-through figure is the price before the current promotion.</p>
+  </header>
+
+  <div class="barline">
+    <div class="results" id="count"></div>
+  </div>
+
+  <div class="tablebox">
+    <table>
+      <thead>
+        <tr>
+          <th data-k="type" tabindex="0">Lens Type<span class="arrow">▲</span></th>
+          <th data-k="name" tabindex="0">Lens Name<span class="arrow">▲</span></th>
+          <th data-k="focal" tabindex="0">Focal Length<span class="arrow">▲</span></th>
+          <th data-k="ap" tabindex="0">Aperture<span class="arrow">▲</span></th>
+          <th data-k="line" tabindex="0">Series<span class="arrow">▲</span></th>
+          <th data-k="fmt" tabindex="0">Format<span class="arrow">▲</span></th>
+          <th data-k="rel" tabindex="0">Released<span class="arrow">▲</span></th>
+          <th data-k="price" tabindex="0" style="text-align:right">Price<span class="arrow">▲</span></th>
+        </tr>
+      </thead>
+      <tbody id="tb"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<div class="panel-dark" id="sline">
+  <div class="wrap">
+    <div class="col">
+      <h2>The S-Line difference.</h2>
+      <p>The S-Line designation is reserved for premium NIKKOR Z lenses — 24 of the 49 in the table. It denotes tighter optical tolerances, dust- and drip-resistant construction, a control ring with display or L-Fn button, and quieter autofocus for video. It does not denote a faster maximum aperture: the 35mm f/1.4 lists at $579.95, the S-Line 35mm f/1.8 at $749.95.</p>
+    </div>
+  </div>
+</div>
+
+<div class="panel-light" id="trios">
+  <div class="wrap">
+    <div class="kicker">Two f/2.8 zoom trios</div>
+    <h2>Same coverage, half the price.</h2>
+    <p>The professional S-Line trio — 14-24mm, 24-70mm and 70-200mm — and the compact trio of 17-28mm, 28-75mm and 70-180mm both run from wide angle to short telephoto at a constant f/2.8. The difference is weight, build and cost.</p>
+    <div class="figure">
+      <div><b>$7,199.85</b><span>14-24, 24-70, 70-200mm f/2.8 S-Line</span></div>
+      <div><b>$3,299.85</b><span>17-28, 28-75, 70-180mm f/2.8</span></div>
+    </div>
+  </div>
+</div>
+
+<footer>Prices and model list: Mirrorless Lenses, <a href="https://www.nikonusa.com/lenses/mirrorless-lenses" target="_blank" rel="noopener">nikonusa.com</a>, retrieved 10 September 2026 — US retail, excluding tax. Release dates: <a href="https://en.wikipedia.org/wiki/Nikon_Z-mount" target="_blank" rel="noopener">Nikon Z-mount lens table</a>, Wikipedia. Teleconverters TC-1.4x and TC-2.0x are not included. Fan-made page, not affiliated with Nikon.</footer>
+
+<script>
+const D=[
+ ["zoom","NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",12,28,3.5,"f/3.5-5.6",0,"DX",339.95,399.95],
+ ["zoom","NIKKOR Z 14-24mm f/2.8 S",14,24,2.8,"f/2.8",1,"FX",1999.95,2699.95],
+ ["zoom","NIKKOR Z 14-30mm f/4 S",14,30,4,"f/4",1,"FX",1099.95,1399.95],
+ ["zoom","NIKKOR Z DX 16-50mm f/2.8 VR",16,50,2.8,"f/2.8",0,"DX",899.95,0],
+ ["zoom","NIKKOR Z DX 16-50mm f/3.5-6.3 VR",16,50,3.5,"f/3.5-6.3",0,"DX",329.95,0],
+ ["zoom","NIKKOR Z DX 16-50mm f/3.5-6.3 VR (Silver)",16,50,3.5,"f/3.5-6.3",0,"DX",329.95,0],
+ ["zoom","NIKKOR Z 17-28mm f/2.8",17,28,2.8,"f/2.8",0,"FX",1099.95,1299.95],
+ ["zoom","NIKKOR Z DX 18-140mm f/3.5-6.3 VR",18,140,3.5,"f/3.5-6.3",0,"DX",679.95,0],
+ ["prime","NIKKOR Z 20mm f/1.8 S",20,20,1.8,"f/1.8",1,"FX",1049.95,1149.95],
+ ["zoom","NIKKOR Z 24-50mm f/4-6.3",24,50,4,"f/4-6.3",0,"FX",449.95,0],
+ ["zoom","NIKKOR Z 24-70mm f/4 S",24,70,4,"f/4",1,"FX",1049.95,0],
+ ["zoom","NIKKOR Z 24-70mm f/2.8 S",24,70,2.8,"f/2.8",1,"FX",1999.95,2549.95],
+ ["zoom","NIKKOR Z 24-70mm f/2.8 S II",24,70,2.8,"f/2.8",1,"FX",2799.95,0],
+ ["zoom","NIKKOR Z 24-105mm f/4-7.1",24,105,4,"f/4-7.1",0,"FX",549.95,0],
+ ["zoom","NIKKOR Z 24-120mm f/4 S",24,120,4,"f/4",1,"FX",999.95,1149.95],
+ ["zoom","NIKKOR Z 24-200mm f/4-6.3 VR",24,200,4,"f/4-6.3",0,"FX",849.95,949.95],
+ ["prime","NIKKOR Z 24mm f/1.8 S",24,24,1.8,"f/1.8",1,"FX",999.95,1099.95],
+ ["prime","NIKKOR Z DX 24mm f/1.7",24,24,1.7,"f/1.7",0,"DX",269.95,319.95],
+ ["prime","NIKKOR Z 26mm f/2.8",26,26,2.8,"f/2.8",0,"FX",449.95,549.95],
+ ["zoom","NIKKOR Z 28-75mm f/2.8",28,75,2.8,"f/2.8",0,"FX",999.95,1199.95],
+ ["zoom","NIKKOR Z 28-135mm f/4 PZ",28,135,4,"f/4",0,"FX",2499.95,2799.95],
+ ["zoom","NIKKOR Z 28-400mm f/4-8 VR",28,400,4,"f/4-8",0,"FX",1149.95,1449.95],
+ ["prime","NIKKOR Z 28mm f/2.8",28,28,2.8,"f/2.8",0,"FX",229.95,299.95],
+ ["prime","NIKKOR Z 28mm f/2.8 (SE)",28,28,2.8,"f/2.8",0,"FX",309.95,329.95],
+ ["prime","NIKKOR Z 35mm f/1.2 S",35,35,1.2,"f/1.2",1,"FX",2599.95,2999.95],
+ ["prime","NIKKOR Z 35mm f/1.4",35,35,1.4,"f/1.4",0,"FX",579.95,679.95],
+ ["prime","NIKKOR Z 35mm f/1.8 S",35,35,1.8,"f/1.8",1,"FX",749.95,899.95],
+ ["prime","NIKKOR Z DX MC 35mm f/1.7",35,35,1.7,"f/1.7",0,"DX",449.95,0],
+ ["prime","NIKKOR Z 40mm f/2",40,40,2,"f/2",0,"FX",229.95,299.95],
+ ["prime","NIKKOR Z 40mm f/2 (SE)",40,40,2,"f/2",0,"FX",259.95,329.95],
+ ["zoom","NIKKOR Z DX 50-250mm f/4.5-6.3 VR",50,250,4.5,"f/4.5-6.3",0,"DX",409.95,0],
+ ["prime","NIKKOR Z 50mm f/1.2 S",50,50,1.2,"f/1.2",1,"FX",2049.95,2249.95],
+ ["prime","NIKKOR Z 50mm f/1.4",50,50,1.4,"f/1.4",0,"FX",549.95,599.95],
+ ["prime","NIKKOR Z 50mm f/1.8 S",50,50,1.8,"f/1.8",1,"FX",469.95,669.95],
+ ["prime","NIKKOR Z MC 50mm f/2.8",50,50,2.8,"f/2.8",0,"FX",669.95,719.95],
+ ["prime","NIKKOR Z 58mm f/0.95 S Noct",58,58,0.95,"f/0.95",1,"FX",8649.95,0],
+ ["zoom","NIKKOR Z 70-180mm f/2.8",70,180,2.8,"f/2.8",0,"FX",1199.95,1399.95],
+ ["zoom","NIKKOR Z 70-200mm f/2.8 VR S II",70,200,2.8,"f/2.8",1,"FX",3199.95,0],
+ ["prime","NIKKOR Z 85mm f/1.2 S",85,85,1.2,"f/1.2",1,"FX",2799.95,2999.95],
+ ["prime","NIKKOR Z 85mm f/1.8 S",85,85,1.8,"f/1.8",1,"FX",749.95,849.95],
+ ["zoom","NIKKOR Z 100-400mm f/4.5-5.6 VR S",100,400,4.5,"f/4.5-5.6",1,"FX",2699.95,2949.95],
+ ["prime","NIKKOR Z MC 105mm f/2.8 VR S",105,105,2.8,"f/2.8",1,"FX",899.95,1149.95],
+ ["prime","NIKKOR Z 135mm f/1.8 S Plena",135,135,1.8,"f/1.8",1,"FX",2199.95,2599.95],
+ ["zoom","NIKKOR Z 180-600mm f/5.6-6.3 VR",180,600,5.6,"f/5.6-6.3",0,"FX",2099.95,2199.95],
+ ["prime","NIKKOR Z 400mm f/2.8 TC VR S",400,400,2.8,"f/2.8",1,"FX",12699.95,14699.95],
+ ["prime","NIKKOR Z 400mm f/4.5 VR S",400,400,4.5,"f/4.5",1,"FX",3499.95,0],
+ ["prime","NIKKOR Z 600mm f/4 TC VR S",600,600,4,"f/4",1,"FX",14699.95,16199.95],
+ ["prime","NIKKOR Z 600mm f/6.3 VR S",600,600,6.3,"f/6.3",1,"FX",5199.95,0],
+ ["prime","NIKKOR Z 800mm f/6.3 VR S",800,800,6.3,"f/6.3",1,"FX",6999.95,0]
+].map(r=>({type:r[0],name:r[1],fmin:r[2],fmax:r[3],ap:r[4],apL:r[5],s:r[6],fmt:r[7],price:r[8],was:r[9]}));
+
+const OWNED=["NIKKOR Z 24-70mm f/4 S","NIKKOR Z 24-120mm f/4 S","NIKKOR Z 40mm f/2"];
+D.forEach(d=>{d.owned=OWNED.includes(d.name)});
+
+const REL={
+ "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR":"2023-04-18",
+ "NIKKOR Z 14-24mm f/2.8 S":"2020-09-16",
+ "NIKKOR Z 14-30mm f/4 S":"2019-01-08",
+ "NIKKOR Z DX 16-50mm f/2.8 VR":"2025-10-16",
+ "NIKKOR Z DX 16-50mm f/3.5-6.3 VR":"2019-10-10",
+ "NIKKOR Z DX 16-50mm f/3.5-6.3 VR (Silver)":"2021-06-29",
+ "NIKKOR Z 17-28mm f/2.8":"2022-09-20",
+ "NIKKOR Z DX 18-140mm f/3.5-6.3 VR":"2021-10-13",
+ "NIKKOR Z 20mm f/1.8 S":"2020-02-11",
+ "NIKKOR Z 24-50mm f/4-6.3":"2020-07-21",
+ "NIKKOR Z 24-70mm f/4 S":"2018-08-23",
+ "NIKKOR Z 24-70mm f/2.8 S":"2019-02-14",
+ "NIKKOR Z 24-70mm f/2.8 S II":"2025-08-22",
+ "NIKKOR Z 24-105mm f/4-7.1":"2026-01-07",
+ "NIKKOR Z 24-120mm f/4 S":"2021-10-28",
+ "NIKKOR Z 24-200mm f/4-6.3 VR":"2020-02-11",
+ "NIKKOR Z 24mm f/1.8 S":"2019-09-04",
+ "NIKKOR Z DX 24mm f/1.7":"2023-05-31",
+ "NIKKOR Z 26mm f/2.8":"2023-02-07",
+ "NIKKOR Z 28-75mm f/2.8":"2021-12-14",
+ "NIKKOR Z 28-135mm f/4 PZ":"2025-02-13",
+ "NIKKOR Z 28-400mm f/4-8 VR":"2024-03-27",
+ "NIKKOR Z 28mm f/2.8":"2021-11-18",
+ "NIKKOR Z 28mm f/2.8 (SE)":"2021-06-29",
+ "NIKKOR Z 35mm f/1.2 S":"2025-02-05",
+ "NIKKOR Z 35mm f/1.4":"2024-06-26",
+ "NIKKOR Z 35mm f/1.8 S":"2018-08-23",
+ "NIKKOR Z DX MC 35mm f/1.7":"2025-10-16",
+ "NIKKOR Z 40mm f/2":"2021-09-14",
+ "NIKKOR Z 40mm f/2 (SE)":"2022-12-14",
+ "NIKKOR Z DX 50-250mm f/4.5-6.3 VR":"2019-10-10",
+ "NIKKOR Z 50mm f/1.2 S":"2020-09-16",
+ "NIKKOR Z 50mm f/1.4":"2024-09-10",
+ "NIKKOR Z 50mm f/1.8 S":"2018-08-23",
+ "NIKKOR Z MC 50mm f/2.8":"2021-06-02",
+ "NIKKOR Z 58mm f/0.95 S Noct":"2019-10-10",
+ "NIKKOR Z 70-180mm f/2.8":"2023-06-21",
+ "NIKKOR Z 70-200mm f/2.8 VR S II":"2026-02-24",
+ "NIKKOR Z 85mm f/1.2 S":"2023-02-07",
+ "NIKKOR Z 85mm f/1.8 S":"2019-07-31",
+ "NIKKOR Z 100-400mm f/4.5-5.6 VR S":"2021-10-28",
+ "NIKKOR Z MC 105mm f/2.8 VR S":"2021-06-02",
+ "NIKKOR Z 135mm f/1.8 S Plena":"2023-09-27",
+ "NIKKOR Z 180-600mm f/5.6-6.3 VR":"2023-06-21",
+ "NIKKOR Z 400mm f/2.8 TC VR S":"2022-01-19",
+ "NIKKOR Z 400mm f/4.5 VR S":"2022-06-26",
+ "NIKKOR Z 600mm f/4 TC VR S":"2022-11-02",
+ "NIKKOR Z 600mm f/6.3 VR S":"2023-10-11",
+ "NIKKOR Z 800mm f/6.3 VR S":"2022-04-06"
+};
+D.forEach(d=>{d.rel=REL[d.name]||""});
+const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const relL=d=>d.rel?MON[+d.rel.slice(5,7)-1]+" "+d.rel.slice(0,4):"—";
+
+const F={type:"all",line:"all",fmt:"all"};
+let sortKey="type", sortDir=1;
+
+const money=n=>"$"+n.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
+const focalL=d=>d.fmin===d.fmax?d.fmin+"mm":d.fmin+"–"+d.fmax+"mm";
+
+function pass(d){
+  if(F.type!=="all"&&d.type!==F.type)return false;
+  if(F.line==="s"&&!d.s)return false;
+  if(F.line==="nons"&&d.s)return false;
+  if(F.fmt!=="all"&&d.fmt!==F.fmt)return false;
+  return true;
+}
+function keyOf(d){
+  switch(sortKey){
+    case "type":return [d.type==="prime"?1:0,d.fmin,d.ap];
+    case "name":return [d.name.toLowerCase()];
+    case "focal":return [d.fmin,d.fmax];
+    case "ap":return [d.ap,d.fmin];
+    case "line":return [d.s?0:1,d.fmin];
+    case "fmt":return [d.fmt==="FX"?0:1,d.fmin];
+    case "rel":return [d.rel||"9999",d.fmin];
+    case "price":return [d.price];
+  }
+}
+function cmp(a,b){
+  const ka=keyOf(a),kb=keyOf(b);
+  for(let i=0;i<ka.length;i++){
+    if(ka[i]<kb[i])return -1*sortDir;
+    if(ka[i]>kb[i])return 1*sortDir;
+  }
+  return 0;
+}
+function render(){
+  const rows=D.filter(pass).sort(cmp);
+  document.getElementById("tb").innerHTML=rows.map(d=>`
+    <tr>
+      <td>${d.type==="zoom"?"Zoom":"Prime"}</td>
+      <td class="name">${d.name}${d.owned?'<span class="owned" title="Owned" aria-label="Owned"></span>':""}</td>
+      <td class="num">${focalL(d)}</td>
+      <td class="num">${d.apL}</td>
+      <td>${d.s?'<span class="sline">S-Line</span>':'<span class="dash">—</span>'}</td>
+      <td>${d.fmt}</td>
+      <td class="num">${relL(d)}</td>
+      <td class="price">${d.was?'<span class="saletag">SALE</span>'+money(d.price)+'<small>'+money(d.was)+'</small>':money(d.price)}</td>
+    </tr>`).join("");
+  document.getElementById("count").innerHTML=rows.length+" Results <span>of "+D.length+"</span>";
+  document.getElementById("brandCount").textContent=rows.length+(rows.length===1?" lens":" lenses");
+  document.querySelectorAll("thead th").forEach(th=>{
+    const on=th.dataset.k===sortKey;
+    th.dataset.active=on?"1":"0";
+    th.querySelector(".arrow").textContent=on?(sortDir===1?"▲":"▼"):"▲";
+    th.querySelector(".arrow").style.opacity=on?"1":".3";
+  });
+}
+document.querySelectorAll("thead th").forEach(th=>{
+  const go=()=>{
+    if(sortKey===th.dataset.k)sortDir*=-1; else {sortKey=th.dataset.k;sortDir=1;}
+    render();
+  };
+  th.addEventListener("click",go);
+  th.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}});
+});
+[["segType","type"],["segLine","line"],["segFmt","fmt"]].forEach(([id,field])=>{
+  const box=document.getElementById(id);
+  box.addEventListener("click",e=>{
+    const b=e.target.closest("button"); if(!b)return;
+    F[field]=b.dataset.v;
+    box.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
+    render();
+  });
+});
+document.getElementById("reset").addEventListener("click",()=>{
+  F.type="all";F.line="all";F.fmt="all";
+  document.querySelectorAll(".navgroup").forEach(g=>{
+    g.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.v==="all")));
+  });
+  render();
+});
+render();
+</script>
+<script src="assets/menu.js"></script>
+</body>
+</html>
